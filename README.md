@@ -111,10 +111,10 @@ Two volumes are created at the start of the stack OCSInventory. They contain the
 
 By default:
 
- **ocsdata** for the MYSQL service
-   - /var/lib/mysql
+**ocsdata** for the MYSQL service
+   - /var/lib/mysql/
 
-  **ocssrv** for service OCSInventory
+**ocssrv** for service OCSInventory 
    - /usr/share/ocsinventory-reports/
    - /etc/ocsinventory-reports/
    - /var/lib/ocsinventory-reports/
