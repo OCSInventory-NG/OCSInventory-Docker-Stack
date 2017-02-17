@@ -43,9 +43,9 @@ We include a MYSQL container with pre-configured with the required database sett
 
 We use docker-compose to build these images. Clone this repo and then:
 
-> sudo git clone https://github.com/OCSInventory-NG/OCSInventory-Docker-Stack.git
-> cd OCSInventory-Docker-Stack
-> sudo docker-compose build
+> sudo git clone https://github.com/OCSInventory-NG/OCSInventory-Docker-Stack.git <br>
+> cd OCSInventory-Docker-Stack <br>
+> sudo docker-compose build 
 
 This command will build all the images and pull the latest version.
 
