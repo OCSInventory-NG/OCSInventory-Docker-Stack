@@ -1,3 +1,4 @@
+OCS_DBNAME : ocsweb OCS_DBSERVER_READ : ocsinventory-db OCS_DBSERVER_WRITE : ocsinventory-db OCS_DBUSER : ocs OCS_DBPASS : ocs
 
 <p align="center">
   <img src="http://www.ocsinventory-ng.org/wp-content/uploads/2016/09/banniere-ocs.png" height=200 width=508 alt="Banner">
@@ -62,10 +63,10 @@ By default, when the OCSInventory container is running it will load a default OC
 
 environment:
 
-> MYSQL_ROOT_PASSWORD : changeme  
-> MYSQL_USER : ocs
-> MYSQL_PASSWORD : ocs
-> MYSQL_DATABASE : ocsweb
+> MYSQL_ROOT_PASSWORD : changeme  <br>
+> MYSQL_USER : ocs <br> 
+> MYSQL_PASSWORD : ocs <br> 
+> MYSQL_DATABASE : ocsweb 
 
 ----------
 
