@@ -72,17 +72,17 @@ environment:
 
 environment :
 
-> OCS_DBNAME : ocsweb
-> OCS_DBSERVER_READ : ocsinventory-db
-> OCS_DBSERVER_WRITE : ocsinventory-db
-> OCS_DBUSER : ocs
+> OCS_DBNAME : ocsweb <br>
+> OCS_DBSERVER_READ : ocsinventory-db <br>
+> OCS_DBSERVER_WRITE : ocsinventory-db <br>
+> OCS_DBUSER : ocs <br>
 > OCS_DBPASS : ocs
 
 These values are the default values for OCSInventory, if you want to change, you must change the configuration in z-ocsinventory-server.conf
 After adjusting the docker-compose.yml, you can test the containers with docker-compose
 
-> cd OCSInventory-Docker-Stack
-> sudo docker-compose build
+> cd OCSInventory-Docker-Stack <br>
+> sudo docker-compose build <br>
 > sudo docker-compose up
 
 This will bring up all needed containers, link them and mount data volumes according to the docker-compose.yml configuration file.
