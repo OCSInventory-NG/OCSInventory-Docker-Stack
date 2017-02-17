@@ -124,12 +124,12 @@ Attention do not remove these volumes without having planned backup, otherwise y
 
 ## Contributing
 
-Fork it!
-Create your feature branch: git checkout -b my-new-feature
-Add your changes: git add folder/file1.php
-Commit your changes: git commit -m 'Add some feature'
-Push to the branch: git push origin my-new-feature
-Submit a pull request !
+1.Fork it!
+2.Create your feature branch: git checkout -b my-new-feature
+3.Add your changes: git add folder/file1.php
+4.Commit your changes: git commit -m 'Add some feature'
+5.Push to the branch: git push origin my-new-feature
+6.Submit a pull request !
 
 ## License
 
