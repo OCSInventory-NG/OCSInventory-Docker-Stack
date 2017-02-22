@@ -1,7 +1,7 @@
 version: '3'
 services :
   web :
-    image : ocsinventory/ocsinventory-docker-image:master
+    image : ocsinventory/ocsinventory-docker-image:latest
     container_name : ocsinventory-server
     environment :
       OCS_DBNAME : ocsweb
