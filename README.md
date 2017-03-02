@@ -77,7 +77,7 @@ environment :
 > OCS_DBUSER : ocs <br>
 > OCS_DBPASS : ocs
 
-These values are the default values for OCSInventory, if you want to change, you must change the configuration in z-ocsinventory-server.conf
+These values are the default values for OCSInventory.
 After adjusting the docker-compose.yml, you can test the containers with docker-compose
 
 > cd OCSInventory-Docker-Stack <br>
