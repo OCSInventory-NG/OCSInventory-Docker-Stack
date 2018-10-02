@@ -5,8 +5,8 @@ services :
     container_name : ocsinventory-server
     environment:
       OCS_DBNAME: ocsweb
-      OCS_DBSERVER_READ: db
-      OCS_DBSERVER_WRITE: db
+      OCS_DBSERVER_READ: ocsinventory-db
+      OCS_DBSERVER_WRITE: ocsinventory-db
       OCS_DBUSER: root
       OCS_DBPASS: password
     volumes :
@@ -14,7 +14,7 @@ services :
       - ocs_conf:/etc/ocsinventory-reports/
       - ocs_libs:/var/lib/ocsinventory-reports/
     links :
-      - db
+      - ocsinventory-db
     ports :
       - 80:80
       - 443:443
