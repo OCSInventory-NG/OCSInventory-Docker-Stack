@@ -14,7 +14,7 @@ services :
       - ocs_conf:/etc/ocsinventory-reports/
       - ocs_libs:/var/lib/ocsinventory-reports/
     links :
-      - ocsinventory-db
+      - db
     ports :
       - 80:80
       - 443:443
