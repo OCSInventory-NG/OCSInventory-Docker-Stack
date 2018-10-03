@@ -3,16 +3,16 @@ services :
   web :
     image : ocsinventory/ocsinventory-docker-image:latest
     container_name : ocsinventory-server
-    environment :
-      OCS_DBNAME : ocsweb
-      OCS_DBSERVER_READ : ocsinventory-db
-      OCS_DBSERVER_WRITE : ocsinventory-db
-      OCS_DBUSER : ocs
-      OCS_DBPASS : ocs
+    environment:
+      OCS_DBNAME: ocsweb
+      OCS_DBSERVER_READ: ocsinventory-db
+      OCS_DBSERVER_WRITE: ocsinventory-db
+      OCS_DBUSER: root
+      OCS_DBPASS: password
     volumes :
-      - ocssrv:/usr/share/ocsinventory-reports/
-      - ocssrv:/etc/ocsinventory-reports/
-      - ocssrv:/var/lib/ocsinventory-reports/
+      - ocs_srv:/usr/share/ocsinventory-reports/
+      - ocs_conf:/etc/ocsinventory-reports/
+      - ocs_libs:/var/lib/ocsinventory-reports/
     links :
       - db
     ports :
@@ -20,22 +20,26 @@ services :
       - 443:443
 
   db :
-    image : mysql:5.7
+    image: mariadb:10.3
     container_name : ocsinventory-db
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD : mdp
-      MYSQL_USER : ocs
-      MYSQL_PASSWORD : ocs
-      MYSQL_DATABASE : ocsweb
-    volumes :
+      MYSQL_DATABASE: ocsweb
+      MYSQL_USER: ocs
+      MYSQL_PASSWORD: ocs
+      MYSQL_ROOT_PASSWORD: password
+    volumes:
+      - ocs_db:/var/lib/mysql
       - ./sql/:/docker-entrypoint-initdb.d/
-      - ocsdata:/var/lib/mysql
     ports :
       - 3306:3306
 
 volumes:
-  ocsdata:
+  ocs_srv:
     driver: local
-  ocssrv:
+  ocs_conf:
+    driver: local
+  ocs_libs:
+    driver: local
+  ocs_db:
     driver: local
