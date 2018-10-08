@@ -10,9 +10,9 @@ services :
       OCS_DBUSER : ocs
       OCS_DBPASS : ocs
     volumes :
-      - ocssrv:/usr/share/ocsinventory-reports/
+      - ocsdownload:/usr/share/ocsinventory-reports/ocsreports/download/
       - ocssrv:/etc/ocsinventory-reports/
-      - ocssrv:/var/lib/ocsinventory-reports/
+      - ocslib:/var/lib/ocsinventory-reports/
     links :
       - db
     ports :
@@ -38,4 +38,8 @@ volumes:
   ocsdata:
     driver: local
   ocssrv:
+    driver: local
+  ocslib:
+    driver: local
+  ocsdownload:
     driver: local
