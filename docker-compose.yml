@@ -3,6 +3,7 @@ services :
   web :
     image : ocsinventory/ocsinventory-docker-image:latest
     container_name : ocsinventory-server
+    restart: always
     environment :
       OCS_DBNAME : ocsweb
       OCS_DBSERVER_READ : ocsinventory-db
