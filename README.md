@@ -31,13 +31,13 @@ OCS Inventory NG includes the packet deployment functionality to be sure that al
 </p>
 <br />
 
-###Docker Stack OCSInventory
+### Docker Stack OCSInventory
 
 This repository contains the needed files to build and run the OCS stack in his last version.
 This stack is based on the official [Debian image](https://hub.docker.com/_/debian/) and official [MYSQL image](https://hub.docker.com/_/mysql/), you can find them on the [Docker hub](https://hub.docker.com/explore/).
 We include a MYSQL container with pre-configured with the required database settings.
 
-###Build instructions
+### Build instructions
 
 We use docker-compose to build these images. Clone this repo and then:
 
@@ -52,11 +52,11 @@ You can also find a prebuilt image for OCSInventory without MYSQL server from ou
 
 > sudo docker pull ocsinventory/ocsinventory-docker-image:master
 
-###How to run it
+### How to run it
 
 By default, when the OCSInventory container is running it will load a default OCSInventory installation that is ready to be used. However, you can run the installer by defining one of these env variables, you can find them in the docker-compose.YML
 
-####MYSQL container :
+#### MYSQL container :
 
 environment:
 
@@ -67,7 +67,7 @@ environment:
 
 ----------
 
-####OCSInventory-server container :
+#### OCSInventory-server container :
 
 environment :
 
@@ -86,7 +86,7 @@ After adjusting the docker-compose.yml, you can test the containers with docker-
 
 This will bring up all needed containers, link them and mount data volumes according to the docker-compose.yml configuration file.
 
-###Container shell access and viewing container logs
+### Container shell access and viewing container logs
 
 The docker exec command allows you to run commands inside a Docker container. The following command line will give you a bash shell inside your OCSInventory container:
 
@@ -104,7 +104,7 @@ or
 
 > sudo docker logs ocsinventory-db
 
-###Data Volume
+### Data Volume
 
 Two volumes are created at the start of the stack OCSInventory. They contain the necessary information to ensure a proper functioning of OCS Inventory as well as MYSQL
 
